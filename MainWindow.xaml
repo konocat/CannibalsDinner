@@ -1,0 +1,87 @@
+﻿<Window x:Class="CannibalsDinner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Cannibals Dinner" Height="529" Width="1000"
+        ResizeMode="NoResize">
+
+    <Window.Resources>
+        <FontFamily x:Key="PixelifySansFont">/assets/PixelifySans.ttf#Pixelify Sans</FontFamily>
+    </Window.Resources>
+
+    <Grid>
+        <Image x:Name="Background" Source="/assets/images/9248d7ff5e2163efa648d0c67683d1b5.png" Height="529" Width="1000"/>
+        <Image Visibility="Hidden" x:Name="Chef" Source="/assets/images/Chef.png" Width="300" Height="300" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="175 0 0 -55"/>
+        <Image Visibility="Visible" x:Name="Chef_sleep" Source="/assets/images/Chef_sleep.png" Width="300" Height="300" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="-25 0 0 -100"/>
+        <Button Background="Transparent" Width="300" VerticalAlignment="Bottom" Click="Button_Click"
+                Style="{StaticResource ClickScaleButtonStyle}">
+            <Image x:Name="PotButton" Source="/assets/images/pot_active.png"/>
+        </Button>
+
+        <Grid Margin="0 50 0 0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions >
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Blood" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Center"
+                Foreground="White" FontFamily="{StaticResource PixelifySansFont}">
+                        <Label.Effect>
+                            <DropShadowEffect Color="Black" BlurRadius="2" Opacity="0.8" ShadowDepth="4" Direction="315"/>
+                        </Label.Effect>
+                    </Label>
+                    <Image HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.Column="1" Source="/assets/images/Blood.png" Width="46" Height="46">
+                        <Image.Effect>
+                            <DropShadowEffect Color="Black" BlurRadius="2" Opacity="0.8" ShadowDepth="4" Direction="315"/>
+                        </Image.Effect>
+                    </Image>
+                </Grid>
+                <Label Grid.Row="1" x:Name="Counter" Content="0" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Center"
+                Foreground="White" FontFamily="{StaticResource PixelifySansFont}">
+                    <Label.Effect>
+                        <DropShadowEffect Color="Black" BlurRadius="2" Opacity="0.8" ShadowDepth="4" Direction="315"/>
+                    </Label.Effect>
+                </Label>
+            </Grid>
+
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions >
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Energy" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Center"
+                Foreground="White" FontFamily="{StaticResource PixelifySansFont}">
+                        <Label.Effect>
+                            <DropShadowEffect Color="Black" BlurRadius="2" Opacity="0.8" ShadowDepth="4" Direction="315"/>
+                        </Label.Effect>
+                    </Label>
+                    <Image HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.Column="1" Source="/assets/images/Meat.png" Width="46" Height="46">
+                        <Image.Effect>
+                            <DropShadowEffect Color="Black" BlurRadius="2" Opacity="0.8" ShadowDepth="4" Direction="315"/>
+                        </Image.Effect>
+                    </Image>
+                </Grid>
+                <Label Grid.Row="1" x:Name="CounterEnergy" Content="100" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Center"
+                Foreground="White" FontFamily="{StaticResource PixelifySansFont}">
+                    <Label.Effect>
+                        <DropShadowEffect Color="Black" BlurRadius="2" Opacity="0.8" ShadowDepth="4" Direction="315"/>
+                    </Label.Effect>
+                </Label>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
