@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/e2f38ddb-94a0-4e13-ac93-7a8dcfb02ad1)# CannibalsDinner
+# CannibalsDinner
 Приложение написано с использованием WPF. Цель разработки приложение - реализация многопоточности.
 Во время реализации многопоточность использовались семафоры.
 
