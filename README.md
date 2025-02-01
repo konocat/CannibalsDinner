@@ -15,4 +15,4 @@
 
 Для удобства тестирования многопоточности старт и конец выполнения задачи в потоке выводится в консоль.
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/1e1fc613-567d-417b-afb7-b667d556df13)
